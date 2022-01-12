@@ -6,14 +6,6 @@ import (
 	"sort"
 )
 
-type MapFunc func(filename string, content string) (res []*Pair)
-type ReduceFunc func(key string, values []string) (res string)
-
-type Pair struct {
-	Key string
-	Val string
-}
-
 type Mr struct {
 	MapFunc    MapFunc
 	ReduceFunc ReduceFunc
